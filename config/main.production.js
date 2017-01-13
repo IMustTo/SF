@@ -8,14 +8,12 @@ const makeConfig = require('../src/utils').makeConfig;
 module.exports = makeConfig({
   // vhost配置
   vhost: {
-    '127.0.0.1': 'demo',
-    'localhost/test': 'test'
+    '127.0.0.1': 'enterprise',
   },
 
   // router配置
   router: {
     prefix: {
-      test: '/test'
     }
   },
 
@@ -47,7 +45,7 @@ module.exports = makeConfig({
   constant: {
     cdn: '',
     domain: {
-      demo: 'http://127.0.0.1:3000'
+      enterprise: 'http://127.0.0.1:3000'
     }
   },
 
@@ -57,12 +55,11 @@ module.exports = makeConfig({
     project: './app/',
     // 当直接访问域名时的默认路由
     default_path: {
-      demo: '/home/index',
-      blog: '/home/index'
+      enterprise: '/home/index',
     },
     // 如果设置jump为false，则当直接访问域名时不重定向到default_path
     default_jump: {
-      demo: false,
+      enterprise: false,
       blog: false
     }
   },
